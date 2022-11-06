@@ -1,12 +1,16 @@
 import time
 
-A = input("number of presicenesss (must be even):")
+A = input("number of calculations(must be even and start with an even or one):")
 print(A)
 
 i = int(0)
 b = float(0)
 x = int(0)
 y = int(2)
+c = float(0)
+d = float(0)
+c = int((int(A)/100))
+e = int(0)
 
 start_time = time.time()
 
@@ -15,8 +19,16 @@ while i < int(A):
     i += 2
     x += 4
     y += 4
+    e += 2
+    if e == int(c):
+        d += 1
+        e = int(0)
+        print(int(d), "%")
 else:
     print("Pi =")
     print(b)
 
 print("--- %s seconds ---" % (time.time() - start_time))
+
+M = input("press enter to close")
+
